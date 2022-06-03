@@ -1,0 +1,180 @@
+---
+title: "Anum's Murdza Dataset"
+author: "Daphne Virlar-Knight"
+date: '2022-05-31'
+output: html_document
+---
+
+
+
+Ticket: https://support.nceas.ucsb.edu/rt/Ticket/Display.html?id=24434&results=64f67e243de01de6c7ff606d381294ce
+Dataset: https://arcticdata.io/catalog/view/urn%3Auuid%3Aa67b13c6-6c8e-41ee-9a5b-4e669fa12111#urn%3Auuid%3A8134d751-6be1-491b-851c-8b4662c49394
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(devtools)
+library(dataone)
+library(datapack)
+library(EML)
+library(remotes)
+library(XML)
+library(uuid)
+library(arcticdatautils)
+library(arcticdatautils)
+```
+
+```{r}
+# Setting up
+# Set nodes
+d1c <- dataone::D1Client("PROD", "urn:node:ARCTIC")
+# Get the package
+packageId <- "resource_map_urn:uuid:d47ca76c-d4bc-44d3-b2c3-e854a5a5294e"
+dp <- getDataPackage(d1c, identifier = packageId, lazyLoad=TRUE, quiet=FALSE)
+xml <- selectMember(dp, name = "sysmeta@fileName", value = ".xml")
+#get_all_versions(d1c@mn, xml)
+doc <- read_eml(getObject(d1c@mn, xml)) # reading in the metadata
+# reading in the old xml 
+#doc <- read_eml(getObject(d1c@mn, "urn:uuid:a67b13c6-6c8e-41ee-9a5b-4e669fa12111"))
+#doc <- read_eml(getObject(d1c@mn, xml)) # reading in the metadata
+```
+
+```{r}
+# Awards
+# Adding NSF Award
+doc$dataset$project <- eml_nsf_to_project("1947107", eml_version = "2.2.0")
+eml_validate(doc)
+```
+
+
+```{r}
+# converting otherEntities to data tables
+doc <- eml_otherEntity_to_dataTable(doc, 1:length(doc$dataset$otherEntity),
+                                    validate_eml = F)
+eml_validate(doc)
+```
+
+```{r}
+# adding physicals
+# Get list of all pids and associated file names
+all_pids <- get_package(d1c@mn, packageId, file_names = TRUE)
+all_pids <- reorder_pids(all_pids$data, doc) #lines up pids w/correct file
+#all_pids
+# for loop to assign physicals for each file
+for (i in 1:length(all_pids)){
+  doc$dataset$dataTable[[i]]$physical <- pid_to_eml_physical(d1c@mn, all_pids[[i]])
+}
+```
+
+```{r}
+# fixing the physicals error
+#add physicals
+for (i in seq_along(doc$dataset$dataTable)) {
+  dataTable <- doc$dataset$dataTable[[i]]
+  id <- dataTable$id
+  if (!grepl("urn-uuid-", id)) {
+    warning("dataTable ", i, " is not a pid")
+  } else {
+    id <- gsub("urn-uuid-", "urn:uuid:", id)
+    physical <- arcticdatautils::pid_to_eml_physical(d1c@mn, id)
+    doc$dataset$dataTable[[i]]$physical <- physical
+  }
+}
+eml_validate(doc)
+```
+
+
+```{r}
+# FAIR Principles
+# add the publisher info
+doc <- eml_add_publisher(doc)
+doc <- eml_add_entity_system(doc)
+eml_validate(doc)
+```
+
+```{r}
+# adding discipline categorization
+doc <- eml_categorize_dataset(doc, "Cryology")
+eml_validate(doc)
+```
+
+```{r}
+# changing the temp variables from ratio to interval
+# this is for table 4, cracked and healed sea and saline ice
+attributeList <- get_attributes(doc$dataset$dataTable[[1]]$attributeList)
+attList <- EML::shiny_attributes(data = NULL, attributes = attributeList$attributes)
+attributeList <- EML::set_attributes(attributes = attList$attributes)
+doc$dataset$dataTable[[1]]$attributeList <- attributeList
+# this is for the next table
+attributeList <- get_attributes(doc$dataset$dataTable[[2]]$attributeList)
+attList <- EML::shiny_attributes(data = NULL, attributes = attributeList$attributes)
+attributeList <- EML::set_attributes(attributes = attList$attributes)
+doc$dataset$dataTable[[2]]$attributeList <- attributeList
+# this is for the next table
+attributeList <- get_attributes(doc$dataset$dataTable[[3]]$attributeList)
+attList <- EML::shiny_attributes(data = NULL, attributes = attributeList$attributes)
+attributeList <- EML::set_attributes(attributes = attList$attributes)
+doc$dataset$dataTable[[3]]$attributeList <- attributeList
+# this is for the next table
+attributeList <- get_attributes(doc$dataset$dataTable[[4]]$attributeList)
+attList <- EML::shiny_attributes(data = NULL, attributes = attributeList$attributes)
+attributeList <- EML::set_attributes(attributes = attList$attributes)
+doc$dataset$dataTable[[4]]$attributeList <- attributeList
+eml_validate(doc)
+```
+
+
+
+
+```{r}
+# Write the updated eml to a file path, and replace the now old metadata
+eml_path <- "~/Scratch/Healing_of_cracks_in_freshwater_saline_and_sea.xml"
+write_eml(doc, eml_path)
+dp <- replaceMember(dp, xml, replacement = eml_path)
+# Set access rules
+  # you don't need to do this every time if myAccessRules is already in the
+  # environment pane, but you DO need to make sure it's in the environment
+  # run you run the next line, otherwise you'll run into bugs
+myAccessRules <- data.frame(subject="CN=arctic-data-admins,DC=dataone,DC=org", 
+                            permission="changePermission")
+# Update the package
+packageId <- uploadDataPackage(d1c, dp, public = FALSE,
+                               accessRules = myAccessRules, quiet = FALSE)
+```
+
+```{r}
+# Setting rights and access
+subject <- 'https://orcid.org/0000-0002-7986-9061'
+# Get data pids
+ids <- getIdentifiers(dp)
+# set rights
+set_rights_and_access(d1c@mn,
+                      pids = c(ids, packageId),
+                      subject = subject,
+                      permissions = c('read', 'write', 'changePermission'))
+```
+
+
+```{r}
+# DOI PUBLISHING
+# Write the updated eml to a file path, and replace the now old metadata
+eml_path <- "~/Scratch/Healing_of_cracks_in_freshwater_saline_and_sea.xml"
+write_eml(doc, eml_path)
+#dp <- replaceMember(dp, xml, replacement = eml_path)
+# publish with a DOI
+#doi <- dataone::generateIdentifier(d1c@mn, "DOI")
+dp <- replaceMember(dp, xml, replacement=eml_path, newId=doi)
+newPackageId <- uploadDataPackage(d1c, dp, public=TRUE, quiet=FALSE)
+# manually set ORCiD
+subject <- 'https://orcid.org/0000-0002-7986-9061'
+# get pIDS
+ids <- getIdentifiers(dp)
+# set rights
+set_rights_and_access(d1c@mn,
+                      pids = c(ids, packageId),
+                      subject = subject,
+                      permissions = c('read', 'write', 'changePermission'))
+```
