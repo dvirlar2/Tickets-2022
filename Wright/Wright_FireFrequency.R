@@ -121,26 +121,6 @@ atts_filled <- separate(atts_full_rep, attributeName,
   select(-temp_or_vwc, -type, -depth, -sensor)  %>% 
    
   write.csv(., "attributes_tbl.csv", row.names = F)
-# 
-#
-# 
-# # match your defined attributes to the individual data frames
-# att_list_i <- list()
-# 
-# for (i in 2:length(dat)){
-#   # filter from full attribute list the relevant attributes
-#   att_list_i[[i]] <- atts_filled %>% 
-#     filter(attributeName %in% colnames(dat[[i]]))}
-#   #att_list_i[[i]]$id <- uuid::UUIDgenerate(n = nrow(att_list_i[[i]]))
-#   
-#   # match the order in the original data
-#   z <- match(colnames(dat[[i]]), att_list_i[[i]]$attributeName)
-#   att_list_i[[i]] <- att_list_i[[i]][z, ]
-# }
-
-
-
-
 
 
 
@@ -151,10 +131,6 @@ atts_filled <- separate(atts_full_rep, attributeName,
 #read in complete table - manually fixed some stuff and reuploaded
 tbl_compl <- read.csv("~/Tickets-2022/attributes_tbl.csv") 
 tbl_compl$id <- NULL
-
-
-
-# att_test <- set_attributes(attributes = tbl_compl)
 
 
 # match your defined attributes to the individual data frames
@@ -183,15 +159,15 @@ for (i in 1:length(dat_real)){
 }
 
 
-##### add atts
+# add attributes
 doc <- read_eml(getObject(d1c@mn, ids$metadata))
 
+
 # remove site roster from dat_pids
-# remove first empty item in dat
 dat_pids_real <- tail(dat_pids, 27)
 
 
-# create your data tables - didn't include 38 because daphne constructed it separately
+# create your data tables
 dts <- list()
 for (i in c(1:length(dat_pids_real))){
   dts[[i]] <- pid_to_eml_entity(d1c@mn,
@@ -203,9 +179,7 @@ for (i in c(1:length(dat_pids_real))){
 
 #add datatables 
 doc$dataset$dataTable <- dts
-#doc <- eml_otherEntity_to_dataTable(doc,
-# 28, # which otherEntities you want to convert, for multiple use - 1:5
-# validate_eml = F)
+
 
 # need to null the otherEntities with matching names, otherwise EML won't validate
 for(i in 2:length(doc$dataset$otherEntity)){
