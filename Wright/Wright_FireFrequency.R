@@ -128,7 +128,7 @@ atts_filled <- separate(atts_full_rep, attributeName,
 
 
 ## ------------------------------------------------------------------------- ##
-#read in complete table - manually fixed some stuff and reuploaded
+# read in complete table
 tbl_compl <- read.csv("~/Tickets-2022/attributes_tbl.csv") 
 tbl_compl$id <- NULL
 
