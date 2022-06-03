@@ -6,9 +6,9 @@
 Wright/attributes_tbl.csv 
 
 # mislabeled filename; code actually for a different dataset
-Wright/FireRegime
+Wright/FireRegime.R
 
 # code from Jeanette and Erika trying to figure out how to programmatically
 # handle unique attributes and annotations for large datasets
-Wright/Unique-Attributes_Continuous
+Wright/Unique-Attributes_Continuous.R
 
