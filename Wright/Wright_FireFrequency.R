@@ -1,6 +1,6 @@
 # Script Goal: Getting Unique Attributes for Wright Datasets
 
-
+ 
 ## ------------------------------------------------------------------------- ##
 # Load libraries
 library(dplyr)
@@ -214,3 +214,426 @@ dp <- replaceMember(dp, ids$metadata, replacement=eml_path)
 newPackageId <- uploadDataPackage(d1c, dp, 
                                   accessRules = myAccessRules,
                                   public=FALSE, quiet=FALSE)
+
+
+
+## ------------------------------------------------------------------------- ##
+## -- load libraries -- ##
+library(dataone)
+library(datapack)
+library(uuid)
+library(arcticdatautils)
+library(EML)
+
+
+## -- general setup -- ##
+# run token in console
+
+
+# get nodes
+d1c <- dataone::D1Client("PROD", "urn:node:ARCTIC")
+
+# Get the package
+packageId <- "resource_map_urn:uuid:1c76689e-054b-4dfa-b035-654d1e9d54e1"
+
+# can't use the develop branch of dataone with this, so using the production version
+dp <- dataone::getDataPackage(d1c, identifier = packageId, lazyLoad=TRUE, quiet=FALSE)
+
+# Get the metadata id
+xml <- selectMember(dp, "sysmeta@fileName", ".xml")
+
+# Read in the metadata
+doc <- read_eml(getObject(d1c@mn, xml))
+
+
+## -- add awards -- ##
+doc$dataset$project <- eml_nsf_to_project("1737166")
+
+length(doc$dataset$otherEntity)
+
+length(doc$dataset$dataTable)
+
+names_OE <- vector()
+for (i in 1:length(doc$dataset$otherEntity)){
+  names_OE[[i]] <- doc$dataset$otherEntity[[i]]$entityName
+}
+
+names_DT <- vector()
+for (i in 1:length(doc$dataset$dataTable)){
+  names_DT[[i]] <- doc$dataset$dataTable[[i]]$entityName
+}
+
+(unique(names_DT))
+
+doc$dataset$dataTable[[27]]$entityName
+
+unique(names_OE) == unique(names_DT)
+
+
+
+## -------------------------------------------------------------------------- ##
+# Tasks: 
+# [X] fix awards section
+# [X] convert sites roster to data table
+# [X] null other entities
+# [X] get physical for sites roster
+# [X] change lat/long to interval
+# [ ] add dataset categorization
+
+
+## -- load libraries -- ##
+library(dataone)
+library(datapack)
+library(uuid)
+library(arcticdatautils)
+library(EML)
+
+
+## -- general setup -- ##
+# run token in console
+
+# get nodes
+d1c <- dataone::D1Client("PROD", "urn:node:ARCTIC")
+
+# Get the package
+packageId <- "resource_map_urn:uuid:08921ac8-bab2-4e72-8ed2-fb5b45346042"
+
+dp <- getDataPackage(d1c, identifier = packageId, lazyLoad=TRUE, quiet=FALSE)
+
+# Get the metadata id
+xml <- selectMember(dp, "sysmeta@fileName", ".xml")
+
+# Read in the metadata
+doc <- read_eml(getObject(d1c@mn, xml))
+
+
+## -- fix/add awards -- ##
+doc$dataset$project <- eml_nsf_to_project("1737166")
+
+
+## -- sites roster OE to DT -- ##
+# Find the sites roster index in other entity
+which_in_eml(doc$dataset$otherEntity, "entityName", 
+             "Melissa_Fire_2022_SitesRoster.csv")
+# [1] 14
+
+# Keep just the one you need rather than NULLing
+doc$dataset$otherEntity <- doc$dataset$otherEntity[[14]]
+
+# convert sites roster to data table
+doc <- eml_otherEntity_to_dataTable(doc, 1, validate_eml = F)
+
+# Add physical to .csv file
+roster_pid <- selectMember(dp, name = "sysmeta@fileName", 
+                           value = "Melissa_Fire_2022_SitesRoster.csv")
+roster_phys <- pid_to_eml_physical(d1c@mn, roster_pid)
+
+
+# Find the sites roster index in other entity
+which_in_eml(doc$dataset$dataTable, "entityName", 
+             "Melissa_Fire_2022_SitesRoster.csv")
+# [1] 28
+
+doc$dataset$dataTable[[28]]$physical <- roster_phys
+eml_validate(doc)
+# TRUE
+
+
+## -- change lat/long measurement type from ratio to interval -- ##
+# Change Latitude
+doc$dataset$dataTable[[28]]$attributeList$attribute[[10]]$measurementScale <- doc$dataset$dataTable[[28]]$attributeList$attribute[[10]]$measurementScale$interval
+
+
+doc$dataset$dataTable[[28]]$attributeList$attribute[[10]]$measurementScale$interval$unit$standardUnit <- "degree"
+
+
+doc$dataset$dataTable[[28]]$attributeList$attribute[[10]]$measurementScale$interval$numericDomain$numberType <- "real"
+
+
+# Change Latitude
+doc$dataset$dataTable[[28]]$attributeList$attribute[[11]]$measurementScale <- doc$dataset$dataTable[[28]]$attributeList$attribute[[11]]$measurementScale$interval
+
+
+doc$dataset$dataTable[[28]]$attributeList$attribute[[11]]$measurementScale$interval$unit$standardUnit <- "degree"
+
+
+doc$dataset$dataTable[[28]]$attributeList$attribute[[11]]$measurementScale$interval$numericDomain$numberType <- "real"
+
+
+## -- categorize dataset -- ##
+doc <- eml_categorize_dataset(doc, c("Soil Science", "Forestry"))
+
+
+
+## -- update package -- ##
+eml_path <- "~/Scratch/Regional_impacts_of_increasing_fire_frequency.xml"
+write_eml(doc, eml_path)
+
+dp <- replaceMember(dp, xml, replacement = eml_path)
+
+myAccessRules <- data.frame(subject="CN=arctic-data-admins,DC=dataone,DC=org", 
+                            permission="changePermission")
+
+newPackageId <- uploadDataPackage(d1c, dp, public = FALSE,
+                                  accessRules = myAccessRules, quiet = FALSE)
+
+## -- add PI access -- ##
+# Manually set ORCiD
+# Thomas (Colby) Wright
+subject <- 'http://orcid.org/0000-0002-2586-6287'
+
+pids <- arcticdatautils::get_package(d1c@mn, packageId)
+
+set_rights_and_access(d1c@mn,
+                      pids = c(xml, pids$data, packageId),
+                      subject = subject,
+                      permissions = c('read', 'write', 'changePermission'))
+
+
+
+
+## ------------------------------------------------------------------------- ##
+
+
+## -- load libraries -- ##
+library(dataone)
+library(datapack)
+library(uuid)
+library(arcticdatautils)
+library(EML)
+
+
+## -- general setup -- ##
+# run token in console
+
+
+# get nodes
+d1c <- dataone::D1Client("PROD", "urn:node:ARCTIC")
+
+packageId <- "urn:uuid:7b24766b-f305-45ba-ab01-5d504c81aafb"
+
+dp <- dataone::getDataPackage(d1c, identifier = packageId, lazyLoad=TRUE, quiet=FALSE)
+xml <- selectMember(dp, "sysmeta@fileName", ".xml")
+doc <- read_eml(getObject(d1c@mn, xml))
+
+
+
+## -- entity descriptions -- ##
+
+# index sites Roster
+which_in_eml(doc$dataset$dataTable, "entityName", "Melissa_Fire_2022_SitesRoster.csv")
+  # 28
+
+# how long is data table
+length(doc$dataset$dataTable)
+  # 28
+
+
+t <- vector(length = 27)
+t_split <- vector(length = 27)
+
+# for loop for splitting entity names
+for(i in 1:27){
+  t[i] <- doc$dataset$dataTable[[i]]$entityName
+  t_split <- strsplit(t, split = "_|.csv")
+}
+
+# assigning entity descriptions based on t_split values
+for(i in 1:length(t_split)){
+  # dalton fire reference filenames
+  if(t_split[[i]][2] == "DHR"){
+    doc$dataset$dataTable[[i]]$entityDescription <- paste(
+      "Daily data collected in United States at the Dalton Fire Reference site collected between",
+      t_split[[i]][6], # day
+      month.name[as.numeric(t_split[[i]][5])], # month
+      t_split[[i]][4], # year
+      "and", 
+      t_split[[i]][9], # day
+      month.name[as.numeric(t_split[[i]][8])], # month
+      t_split[[i]][7] # year
+    )
+  } else if(t_split[[i]][2] == "DHX" & t_split[[i]][3] == "001"){ # dalton fire 1x
+    doc$dataset$dataTable[[i]]$entityDescription <- paste(
+      "Daily data collected in United States at the Dalton Fire 1x site collected between",
+      t_split[[i]][6], # day
+      month.name[as.numeric(t_split[[i]][5])], # month
+      t_split[[i]][4], # year
+      "and", 
+      t_split[[i]][9], # day
+      month.name[as.numeric(t_split[[i]][8])], # month
+      t_split[[i]][7] # year
+    )
+  } else if(t_split[[i]][2] == "DHX" & t_split[[i]][3] == "002" ){ # dalton fire 2x
+    doc$dataset$dataTable[[i]]$entityDescription <- paste(
+      "Daily data collected in United States at the Dalton Fire 2x site collected between",
+      t_split[[i]][6], # day
+      month.name[as.numeric(t_split[[i]][5])], # month
+      t_split[[i]][4], # year
+      "and", 
+      t_split[[i]][9], # day
+      month.name[as.numeric(t_split[[i]][8])], # month
+      t_split[[i]][7] # year
+    )
+  } else if(t_split[[i]][2] == "DHX" & t_split[[i]][3] == "003" ){ # dalton fire 3x
+    doc$dataset$dataTable[[i]]$entityDescription <- paste(
+      "Daily data collected in United States at the Dalton Fire 3x site collected between",
+      t_split[[i]][6], # day
+      month.name[as.numeric(t_split[[i]][5])], # month
+      t_split[[i]][4], # year
+      "and", 
+      t_split[[i]][9], # day
+      month.name[as.numeric(t_split[[i]][8])], # month
+      t_split[[i]][7] # year
+    )
+  } else if(t_split[[i]][2] == "SHR"){ # Steese Fire Reference
+    doc$dataset$dataTable[[i]]$entityDescription <- paste(
+      "Daily data collected in United States at the Steese Fire Reference site collected between",
+      t_split[[i]][6], # day
+      month.name[as.numeric(t_split[[i]][5])], # month
+      t_split[[i]][4], # year
+      "and", 
+      t_split[[i]][9], # day
+      month.name[as.numeric(t_split[[i]][8])], # month
+      t_split[[i]][7] # year
+    )
+  } else if(t_split[[i]][2] == "SHX" & t_split[[i]][3] == "001" ){ # Steese 1x
+    doc$dataset$dataTable[[i]]$entityDescription <- paste(
+      "Daily data collected in United States at the Steese Fire 1x site collected between",
+      t_split[[i]][6], # day
+      month.name[as.numeric(t_split[[i]][5])], # month
+      t_split[[i]][4], # year
+      "and", 
+      t_split[[i]][9], # day
+      month.name[as.numeric(t_split[[i]][8])], # month
+      t_split[[i]][7] # year
+    )
+  } else if(t_split[[i]][2] == "SHX" & t_split[[i]][3] == "002" ){ # Steese 2x
+    doc$dataset$dataTable[[i]]$entityDescription <- paste(
+      "Daily data collected in United States at the Steese Fire 2x site collected between",
+      t_split[[i]][6], # day
+      month.name[as.numeric(t_split[[i]][5])], # month
+      t_split[[i]][4], # year
+      "and", 
+      t_split[[i]][9], # day
+      month.name[as.numeric(t_split[[i]][8])], # month
+      t_split[[i]][7] # year
+    )
+  } else if(t_split[[i]][2] == "SHX" & t_split[[i]][3] == "003" ){ # Steese 3x
+    doc$dataset$dataTable[[i]]$entityDescription <- paste(
+      "Daily data collected in United States at the Steese Fire 3x site collected between",
+      t_split[[i]][6], # day
+      month.name[as.numeric(t_split[[i]][5])], # month
+      t_split[[i]][4], # year
+      "and", 
+      t_split[[i]][9], # day
+      month.name[as.numeric(t_split[[i]][8])], # month
+      t_split[[i]][7] # year
+    )
+  }
+}
+
+
+## -- update package -- ##
+eml_path <- "~/Scratch/Regional_impacts_of_increasing_fire_frequency.xml"
+write_eml(doc, eml_path)
+
+dp <- replaceMember(dp, xml, replacement = eml_path)
+
+myAccessRules <- data.frame(subject="CN=arctic-data-admins,DC=dataone,DC=org", 
+                            permission="changePermission")
+
+newPackageId <- uploadDataPackage(d1c, dp, public = FALSE,
+                                  accessRules = myAccessRules, quiet = FALSE)
+
+
+
+
+## ------------------------------------------------------------------------- ##
+# Jun 27, 2022
+# create if statement that changes all fahrenheits to celsius, and int to ratio
+
+## -- load libraries -- ##
+library(dataone)
+library(datapack)
+library(uuid)
+library(arcticdatautils)
+library(EML)
+
+
+## -- general setup -- ##
+# run token in console
+
+
+# get nodes
+d1c <- dataone::D1Client("PROD", "urn:node:ARCTIC")
+
+packageId <- "urn:uuid:67cd5c6a-74da-406c-bfea-d3891a6d1dca"
+
+dp <- dataone::getDataPackage(d1c, identifier = packageId, lazyLoad=TRUE, quiet=FALSE)
+xml <- selectMember(dp, "sysmeta@fileName", ".xml")
+doc <- read_eml(getObject(d1c@mn, xml))
+
+
+## -- edit attributes -- ##
+# What finds temp in att name?
+grepl("Temp", doc$dataset$dataTable[[1]]$attributeList$attribute[[2]]$attributeName)
+  # TRUE
+
+# what's the temp unit
+doc$dataset$dataTable[[1]]$attributeList$attribute[[2]]$measurementScale$interval
+
+# change temp atts
+for(i in 1:length(doc$dataset$dataTable)){
+  # create object with attributes
+  atts <- doc$dataset$dataTable[[i]]$attributeList$attribute
+  
+  for(j in 1:length(atts)){
+    # change fahr to cels for all temps; and int to ratio
+    if(grepl("Temp", atts[[j]]$attributeName)){
+      atts[[j]]$measurementScale$interval <- NULL
+      atts[[j]]$measurementScale$ratio$unit$standardUnit <- "celsius"
+      atts[[j]]$measurementScale$ratio$numericDomain$numberType <- "real"
+    }
+    attList <- atts
+  }
+  
+  # assign atts back to doc
+  doc$dataset$dataTable[[i]]$attributeList$attribute <- attList
+}
+
+
+eml_validate(doc)
+# TRUE
+
+
+# chance VWC atts
+for(i in 1:length(doc$dataset$dataTable)){
+  # create object with attributes
+  atts <- doc$dataset$dataTable[[i]]$attributeList$attribute
+  
+  for(j in 1:length(atts)){
+    # change fahr to cels for all temps; and int to ratio
+    if(grepl("VWC", atts[[j]]$attributeName)){
+      atts[[j]]$measurementScale$ratio$unit$standardUnit <- "meterCubedPerMeterCubed"
+    }
+    attList <- atts
+  }
+  
+  # assign atts back to doc
+  doc$dataset$dataTable[[i]]$attributeList$attribute <- attList
+}
+
+eml_validate(doc)
+
+
+## -- update package -- ##
+eml_path <- "~/Scratch/Regional_impacts_of_increasing_fire_frequency.xml"
+write_eml(doc, eml_path)
+
+dp <- replaceMember(dp, xml, replacement = eml_path)
+
+myAccessRules <- data.frame(subject="CN=arctic-data-admins,DC=dataone,DC=org", 
+                            permission="changePermission")
+
+newPackageId <- uploadDataPackage(d1c, dp, public = FALSE,
+                                  accessRules = myAccessRules, quiet = FALSE)

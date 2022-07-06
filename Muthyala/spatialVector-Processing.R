@@ -16,11 +16,13 @@ xml <- selectMember(dp, name = "sysmeta@fileName", value = ".xml")
 doc <- read_eml(getObject(d1c@mn, xml))
 
 # Get the shapefile pid
-streams <- selectMember(dp, name = "sysmeta@fileName", value = "Gauging_Station.zip")
+streams <- selectMember(dp, name = "sysmeta@fileName", value = "Stream_network.zip")
 
 streams_obj <- arcticdatautils::read_zip_shapefile(d1c@mn, streams)
 
-st_geometry(streams_obj)
+head(streams_obj)
+
+sf::st_geometry(streams_obj)
 
 sf::st_crs(streams_obj)
 
@@ -32,7 +34,7 @@ length(all_pids)
 # keep only the zip pids
 all_pids <- c(all_pids[5], all_pids[6], all_pids[7])
 
-
+ 
 
 
 for(i in seq_along(vector_entity)){ #length of vector pids
