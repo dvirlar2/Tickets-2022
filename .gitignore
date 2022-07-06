@@ -12,3 +12,9 @@ Wright/FireRegime.R
 # handle unique attributes and annotations for large datasets
 Wright/Unique-Attributes_Continuous.R
 
+# Ignore all the tif and raster files from Kapsar
+Kapsar/Coastal/
+Kapsar/10km/
+Kapsar/25km/
+Kapsar/Hex/
+
