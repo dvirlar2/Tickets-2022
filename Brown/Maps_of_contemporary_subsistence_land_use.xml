@@ -1,0 +1,3323 @@
+<?xml version="1.0" encoding="UTF-8"?><eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="urn:uuid:92745522-90f5-4006-92f3-86bc0bfdf869" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0 https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd" system="knb">
+  <dataset id="urn-uuid-92745522-90f5-4006-92f3-86bc0bfdf869"><title>Maps of contemporary subsistence land use in rural Interior Alaska derived from predictive models</title><creator id="5960926422266796">
+      <individualName><givenName>Dana</givenName><surName>Brown</surName></individualName><organizationName>International Arctic Research Center, University of Alaska Fairbanks; Institute of Arctic Biology, University of Alaska Fairbanks</organizationName><electronicMailAddress>dana.brown@alaska.edu</electronicMailAddress>
+      
+      
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-1195-7161</userId>
+    </creator><creator id="4366714966500017">
+      <individualName><givenName>Todd</givenName><surName>Brinkman</surName></individualName><organizationName>Institute of Arctic Biology, University of Alaska Fairbanks</organizationName><electronicMailAddress>tjbrinkman@alaska.edu</electronicMailAddress>
+      
+      
+    </creator><creator id="9212027321379462">
+      <individualName><givenName>Gayle</givenName><surName>Neufeld</surName></individualName><organizationName>Alaska Department of Fish and Game</organizationName>
+      
+    </creator><creator id="1210914649524924">
+      <individualName><givenName>Loraine</givenName><surName>Navarro</surName></individualName><organizationName>Alaska Department of Fish and Game</organizationName>
+      
+    </creator><creator id="7196187525545769">
+      <individualName><givenName>Caroline</givenName><surName>Brown</surName></individualName><organizationName>Alaska Department of Fish and Game</organizationName>
+      
+    </creator><creator id="4422021087862834">
+      <individualName><givenName>Helen</givenName><surName>Cold</surName></individualName><organizationName>Alaska Department of Fish and Game</organizationName>
+      
+    </creator><creator id="4661304058379024">
+      <individualName><givenName>Brooke</givenName><surName>Woods</surName></individualName><organizationName>Tanana Chiefs Conference</organizationName>
+      
+    </creator><creator id="7949780369060796">
+      <individualName><givenName>Bruce</givenName><surName>Ervin</surName></individualName><organizationName>Tanana Chiefs Conference</organizationName>
+      
+    </creator><pubDate>2021</pubDate>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <abstract><para>This geospatial dataset provides model-based predictive maps of subsistence land use in rural Interior Alaska. Subsistence harvesting of wild resources is crucial to the well-being of Alaska Natives and rural Alaskans. The development of these community and regional scale maps was intended to improve our understanding of the spatial extent and patterns of subsistence practices, to support communication among land users, and to facilitate predictions of the human impacts from changes in resource availability, climate and environment, land use, and policy. Logistic regression models for predicting subsistence land use were developed using publicly-available maps of documented subsistence use areas assembled by Alaska Department of Fish and Game for 30 communities (Neufeld et al. 2019). Separate models were used for remote communities and road-connected communities. The best-fit models of subsistence land use probability included the terms: distance to community, distance to main travel corridors (rivers for remote communities; roads and rivers for road-connected communities), distance to lakes (for remote communities only), and community population size. The models were applied to 64 rural communities throughout the Interior region to generate probability maps of subsistence land use at the community level (file names: probability_subsistence_*communitytype*_*CommunityName*.tif). A regional probability map of subsistence land use was constructed using the maximum probability value per pixel from community-level maps (file name: probability_subsistence_InteriorAK.tif). Maps of predicted subsistence use areas were created by classifying the community-level probability maps into used and unused areas (file name: classification_subsistence_InteriorAK.zip). Classification accuracy ranged from 83-86%. Results suggest a large spatial extent (353,771 square kilometers (km2)) of subsistence land use in Interior Alaska, comprising ~60% of the region’s land area. These data were produced as part of a study “Geospatial patterns and models of subsistence land use in rural Interior Alaska” by D. R. N. Brown, T. J. Brinkman, G. Neufeld, L. Navarro, C. L. Brown, H. S. Cold, B. L. Woods, and B. L. Ervin published with Ecology and Society (Brown et al., 2022), https://www.ecologyandsociety.org/vol27/iss2/art23/.</para></abstract><keywordSet><keyword>Alaska</keyword><keyword>fishing</keyword><keyword>geographic information systems</keyword><keyword>geospatial modelling</keyword><keyword>human ecology</keyword><keyword>hunting</keyword><keyword>logistic regression</keyword><keyword>subsistence</keyword><keyword>traditional harvest practices</keyword><keywordThesaurus>None</keywordThesaurus></keywordSet>
+    
+    <intellectualRights><para>This work is dedicated to the public domain under the Creative Commons Universal 1.0 Public Domain Dedication. To view a copy of this dedication, visit https://creativecommons.org/publicdomain/zero/1.0/.</para></intellectualRights>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Interior Region, Alaska</geographicDescription>
+        <boundingCoordinates><westBoundingCoordinate>-166.75</westBoundingCoordinate><eastBoundingCoordinate>-141.072</eastBoundingCoordinate><northBoundingCoordinate>69.117</northBoundingCoordinate><southBoundingCoordinate>60.180</southBoundingCoordinate></boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage><rangeOfDates><beginDate><calendarDate>2011</calendarDate></beginDate><endDate><calendarDate>2017</calendarDate></endDate></rangeOfDates></temporalCoverage>
+      <temporalCoverage><rangeOfDates><beginDate><calendarDate>2019</calendarDate></beginDate><endDate><calendarDate>2021</calendarDate></endDate></rangeOfDates></temporalCoverage>
+    </coverage><annotation><propertyURI label="theme">http://www.w3.org/ns/dcat#theme</propertyURI><valueURI label="Sociology">https://purl.dataone.org/odo/ADCAD_00077</valueURI></annotation><annotation><propertyURI label="Data Sensitivity Category">http://purl.dataone.org/odo/SENSO_00000005</propertyURI><valueURI label="Non-sensitive data">http://purl.dataone.org/odo/SENSO_00000002</valueURI></annotation><contact id="7761455638630130">
+      <individualName><givenName>Dana</givenName><surName>Brown</surName></individualName><organizationName>International Arctic Research Center, University of Alaska Fairbanks; Institute of Arctic Biology, University of Alaska Fairbanks</organizationName><electronicMailAddress>dana.brown@alaska.edu</electronicMailAddress>
+      
+      
+      <userId directory="https://orcid.org">https://orcid.org/0000-0002-1195-7161</userId>
+    </contact><publisher id="4575566337721153"><organizationName>NSF Arctic Data Center</organizationName><electronicMailAddress>support@arcticdata.io</electronicMailAddress><onlineUrl>http://arcticdata.io</onlineUrl>
+      
+      
+      
+      <userId directory="unknown">Q77285095</userId>
+    </publisher><methods><methodStep>
+        <description><section><title>Ethical Research Practices</title><para>From Manuscript: The primary data for this study were publicly-available maps of community-level subsistence use areas developed by ADF&#x26;G through surveys with residents (ADF&#x26;G 2020b). ADF&#x26;G periodically conducts comprehensive surveys in subsistence-based communities to document the subsistence uses and harvest levels of all wild resources over an annual cycle, to describe sharing patterns, and to measure food security, among other objectives. Surveys are conducted only with the expressed permission of the governing bodies in communities, including tribal councils and city governments. Typically, the lead researcher will present information about potential research to the tribal council and if approved, incorporate any input from the council into the survey instrument and research design. Local Research Assistants (LRAs) from the community are hired to assist with the survey implementation. ADF&#x26;G uses different sampling methods depending on community size. A census is used to collect subsistence harvest data in communities with approximately 100 households or less. A simple random sampling design is used for larger communities, representing anywhere from 20–80% of each community’s households, depending on community size. As part of the survey, residents are asked to show on a map the locations that their household used for activities relating to the search for and harvesting of all subsistence resources over the course of the study year. The household spatial data are then compiled at the community level (Neufeld et al. 2019, 2021). Once subsistence data, including spatial data, are analyzed researchers return to the community with the data to discuss results in detail, review the analyses for accuracy and presentation, and discuss appropriate deliverables for the community in addition to a written report in many cases. Tribal entities and project respondents are provided with the draft report for review and comment. Publication of data and analyses happens only after review and approval of the draft report. Specific approval and review processes are detailed in individual reports. Other spatial data exist for subsistence uses by Interior communities, collected and held by other entities including tribes and other researchers; however, the only data included in this analysis are those publicly available through ADF&#x26;G for which the above review processes have been followed.</para></section></description>
+      </methodStep><methodStep>
+        <description>
+          <para>Geospatial datasets were prepared for analysis in ArcGIS Pro 2 (ESRI). Maps of documented subsistence use areas included polygons, lines, and points for 30 communities (Neufeld et al. 2019). Lines and points were converted to polygons using a 30-m buffer area. The local available area for subsistence was defined as a 150-km radius around each community. Areas used for subsistence were coded as 1; areas not used for subsistence were coded as 0. Rasters representing distances to communities, roads (Alaska DOT 2012), rivers (ACCS 2019), and lakes (ACCS 2019) were created.</para>
+        </description>
+      </methodStep><methodStep>
+        <description>
+          <para>An equal number of random points (100) were cast within each of the used and unused areas by community. Geospatial data (distances to communities, roads, rivers, and lakes) and community population size (U.S. Census Bureau 2012) were extracted for each of these points (n=6000).</para>
+        </description>
+      </methodStep><methodStep>
+        <description>
+          <para>Multiple logistic regression models of subsistence land use for remote and road-connected communities were developed in JMP Pro 15 (SAS Institute) using 70% of the points for training data and 30% for model validation. Minimum BIC scores were used for model selection.</para>
+        </description>
+      </methodStep><methodStep>
+        <description>
+          <para>Predicted probabilities of subsistence use were assigned discrete classes (used or unused). We chose a probability threshold that minimized the difference between false positive and false negative rates. Model performance was assessed using rates of classification accuracy for the training and validation datasets.</para>
+        </description>
+      </methodStep><methodStep>
+        <description>
+          <para>The best-fit logistic models were applied individually to 64 rural communities in Interior Alaska to generate maps of predicted probability of subsistence land use and predicted subsistence use areas using ArcGIS Pro 2 (Esri). A regional composite of subsistence use probability was created from community-level maps taking the maximum probability value per pixel.</para>
+        </description>
+      </methodStep>
+      
+      
+      
+      
+      
+      
+      <sampling><studyExtent><description>
+            <para>Models were developed using Alaska Dept. of Fish and Game maps of documented subsistence use areas for 30 communities in Interior Alaska. The models were then applied to the 64 rural communities in this region, excluding the city of Fairbanks, suburban areas, military installations, and communities with populations less than 5 people.</para>
+          </description></studyExtent><samplingDescription><para>Study Area</para><para>Our research was conducted in Interior Alaska, a region extending latitudinally from the Alaska Range to the Brooks Range within the Yukon River Basin. The boundaries of the study area were defined by the Alaska Department of Fish and Game western and eastern Interior subsistence regions, an area of 569,682 km2. This study focused on the rural communities within the Interior Alaska subsistence regions, and excluded the city of Fairbanks, suburban communities, military installations, and communities with a population size less than 5 people. The 64 Interior Alaskan rural communities have a total population of 13,850, with 40% of the population located in 37 remote communities (not connected to the road network), and 60% in 27 road-connected communities (U.S. Census Bureau 2012).</para><para>Most of the remote and some of the road-connected communities have predominantly Alaska Native populations (U.S. Census Bureau 2012). Alaska Natives and non-Natives both participate in subsistence activities. For thousands of years, primarily Dene Athabascan people have inhabited Alaska’s interior. Following a seasonal round that persists today, extended families or small groups follow the resources across traditional territories.  Rural communities participate in a “mixed, subsistence-based socioeconomic system” (Wolfe 1984), where the harvesting of wild foods and contributions of cash income form the basis of the local economies.</para><para>Important subsistence resources for Interior Alaskan communities include: fish (salmon and nonsalmon species), large land mammals (e.g., moose, caribou, bear), small land mammals and furbearers (e.g., beaver, marten, hare), birds (e.g., grouse, ducks), plants (berries and vegetation), wood. During the ice-free season, boats and all-terrain vehicles (ATVs) are used to access resources. In winter, snowmachines and dog teams (less commonly) are used to travel over frozen waterbodies and trails. In areas with roads or ice roads, passenger vehicles are also used to access subsistence use areas.</para><para>Data Analysis</para><para>Our objective was to develop spatially explicit models to predict subsistence land use for rural communities throughout the region using readily available data. Logistic regression models were used to predict the probability of land use for subsistence. The response variable had two possible outcomes: a location was either used for subsistence purposes (coded as 1) or not used (coded as 0).  Parameters are estimated using the method of maximum likelihood. The joint probability function of the sample observations is developed using the Bernoulli distribution for a binary random variable, rather than a normal distribution. We used the statistical software JMP Pro 15 (SAS Institute Inc., Cary, NC) to perform this analysis.</para><para>We compared samples of areas that were used and unused for subsistence within the available area. We determined whether a location was used or unused with Alaska Department of Fish and Game maps of resident-reported subsistence use areas for 30 rural communities (18 remote communities, 12 road-connected communities) compiled in Neufeld et al (2019). These publicly-available maps of community-level subsistence use areas were developed by Alaska Department of Fish and Game through surveys with residents. The Alaska Department of Fish and Game maps of subsistence use areas included polygons (e.g., harvest search areas), lines (e.g., traplines), and points (e.g., harvest locations). We used all of these feature types to represent subsistence use areas after converting the line and point features to polygons with a 30-m buffer area. We defined the local available area as a 150-km radius around each community. This radius was chosen to represent an approximate maximum distance residents travel for subsistence (Neufeld et al. 2019).</para><para>Potential predictors were chosen through exploratory analysis of the Alaska Department of Fish and Game maps of subsistence use areas and prior knowledge. The potential regressors we considered in model development included: community population size (U.S. Census Bureau 2012), distance to home community, distance to nearest road (Alaska DOT 2012) (for road-connected communities only), distance to nearest river (ACCS 2019), and distance to nearest lake/pond (ACCS 2019). Interaction terms between distance to home community and distance to road or river were also included.</para><para>Separate models were developed for remote and road-connected community types because of differences in types of travel corridors and modes of travel. An equal number (100) of random points were cast within each of the used and unused areas by community.  Seventy percent of these points were used for model training (n=2544 for remote, n=1675 for road-connected); and 30% were withheld for model validation (n=1056 for remote, n=725 for road-connected). Models were constructed with forward stepwise logistic regression using the minimum Bayesian information criterion (BIC) score to select the best-fitting and most parsimonious models with the fewest parameters and greatest explanatory power.</para><para>The best-fit models each had five parameters and no interaction terms, and were statistically significant for both remote (d.f. = 4, χ2 = 1752.56,  P less than 0.0001) and road-connected groups (d.f. = 4, χ2 = 1073.73, P less than 0.0001). The selected model for the remote communities included terms for distance to community, distance to river, distance to lake, and population size. The selected model for the road-connected communities included terms for distance to community, distance to road, population size, and distance to river. Regression coefficients indicate that the probability of subsistence use decreased farther from communities (remote, road-connected), rivers (remote, road-connected), lakes (remote only), and roads (road-connected only), and increased with greater population sizes (remote, road-connected).</para><para>Predicted probabilities of subsistence use were assigned discrete classes (used or unused). To reduce bias in this classification, we balanced the trade-off between type 1 and 2 errors by choosing an optimal probability cutoff that minimized the difference between false positive and false negative rates. For both remote and road-connected communities, the optimal cutoff was 0.52; therefore, pixels with predicted subsistence use probabilities ≥ 0.52 were classified as used.  Rates of classification accuracy for the training datasets (used for model development) and validation datasets (withheld from model development) were used to assess model performance. The model for remote communities had a classification accuracy of 86% (for both training and validation datasets), and the model for road-connected communities had a classification accuracy of 83% (training dataset) to 84% (validation dataset).</para><para>The best-fit logistic regression models were applied individually to 64 rural communities in the Alaska Department of Fish and Game Interior Alaska subsistence regions within a GIS framework to generate 30-m resolution maps of predicted subsistence use probability (continuous: from 0-1.0 probability) and predicted subsistence use areas (discrete classification of used areas).  A regional composite of subsistence use probability was created from community-level maps taking the maximum probability value per pixel. The total land area used for subsistence was estimated using the classified subsistence use areas. Based on our model classifications, the predicted regional subsistence use area was 353,771 km2, equivalent to 62% of the land area of Interior Alaska. All spatial model output is included in this dataset.</para><para>Our models have limitations. They were developed with subsistence use data from a single year for each community. Because of annual variation in use, our predictions are likely underestimates of subsistence use areas. Further, the models did not include many variables that are known to impact subsistence practices. Instead, our models focused on readily-available data on basic demographics and physical predictors that remain relatively stable across time and space.</para><para>See the associated manuscript (Brown et al, 2022) for complete methodology and discussion.</para><para>LITERATURE CITED</para><para>ACCS. 2019. Alaska Hydrography Database, Alaska Center for Conservation Science, University of Alaska Anchorage, accessed 2019-10-14. http://akhydro.uaa.alaska.edu/data/ak-hydro/.</para><para>Alaska Department of Labor and Workforce Development. 2019. Alaska Population Overview: 2018 Estimates, Alaska Department of Labor and Workforce Development.</para><para>Alaska DOT. 2012. Road centerlines. http://www.dot.alaska.gov/stwdplng/mapping/shapefiles.shtml.</para><para>Brown, D. R. N., T. J. Brinkman, G. Neufeld, L. Navarro, C. L. Brown, H. S. Cold, B. L. Woods, B. L. Ervin. (2022). Geospatial patterns and models of subsistence land use in rural Interior Alaska. Ecology and Society 27 (2):23. [online] URL: https://www.ecologyandsociety.org/vol27/iss2/art23/</para><para>Neufeld, G., L. Naaktgeboren, D. Gonzalez, and C. Brown. 2019. ABoVE: Subsistence Resource Use Areas of Interior Alaskan Communities, 2011-2017. ORNL DAAC, Oak Ridge, Tennessee, USA. https://doi.org/10.3334/ORNLDAAC/1725.</para><para>U.S. Census Bureau. 2012. 2010 Census of Population and Housing, Population and Housing Unit Counts, CPH-2-3, Alaska. U.S. Government Printing Office, Washington, DC.</para><para>Wolfe, R. J. 1984. Commercial Fishing in the Hunting-Gathering Economy of a Yukon River Yup’ik Society. Etudes/Inuit Studies, Supplementary Issue 8:159–183.</para></samplingDescription></sampling>
+    </methods><project>
+      <title>CNH-L: Adaptive Coupling of Human Environment Linkages in Response to Globally Driven Changes in Subsistence in Rural Alaska</title>
+      <personnel>
+        <individualName>
+          <givenName>Scott</givenName>
+          <surName>T. Scott  Rupp</surName>
+        </individualName>
+        <role>coPrincipalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Stuart</givenName>
+          <surName>F. Stuart  Chapin III</surName>
+        </individualName>
+        <role>coPrincipalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Joseph M</givenName>
+          <surName>Little</surName>
+        </individualName>
+        <role>coPrincipalInvestigator</role>
+      </personnel>
+      <personnel>
+        <individualName>
+          <givenName>Todd J</givenName>
+          <surName>Brinkman</surName>
+        </individualName>
+        <role>principalInvestigator</role>
+      </personnel>
+      <award>
+        <funderName>National Science Foundation</funderName>
+        <funderIdentifier>https://doi.org/10.13039/100000001</funderIdentifier>
+        <awardNumber>1518563</awardNumber>
+        <title>CNH-L: Adaptive Coupling of Human Environment Linkages in Response to Globally Driven Changes in Subsistence in Rural Alaska</title>
+        <awardUrl>https://www.nsf.gov/awardsearch/showAward?AWD_ID=1518563</awardUrl>
+      </award>
+      <award>
+        <funderName>National Aeronautics and Space Administration</funderName>
+        <awardNumber>NNX15AT72A</awardNumber>
+        <title>Biophysical Characteristics and Mechanisms of Environmental Disturbances Influencing Human Access to Ecosystem Services in Boreal Alaska.</title>
+      </award>
+    </project><spatialVector id="urn-uuid-df044257-1e18-4250-bb63-2bfdddee0040" scope="document" system="https://tools.ietf.org/html/rfc4122">
+      <entityName>classification_subsistence_InteriorAK.zip</entityName>
+      <entityDescription>Predicted subsistence use areas for 64 rural communities in Interior Alaska. Derived from model output for individual communities. Subsistence use areas were classified where probability of subsistence land use was greater than or equal to 0.52.</entityDescription>
+      <physical>
+        <objectName>classification_subsistence_InteriorAK.zip</objectName>
+        <size unit="bytes">9136536</size>
+        <authentication method="MD5">f0bfd9ebbbab1511fda1823c0027cacd</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>application/vnd.shp+zip</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:df044257-1e18-4250-bb63-2bfdddee0040</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+        
+      <attribute id="entity_1_attribute_1">
+          <attributeName>Community</attributeName>
+          <attributeDefinition>Name of community</attributeDefinition>
+          <measurementScale>
+            
+          <nominal>
+              <nonNumericDomain>
+                <textDomain>
+                  <definition>Any text</definition>
+                  
+                <pattern>*</pattern></textDomain>
+              </nonNumericDomain>
+            </nominal></measurementScale><annotation><propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI><valueURI label="Name">http://purl.dataone.org/odo/ECSO_00001193</valueURI></annotation>
+          
+        </attribute><attribute id="entity_1_attribute_2">
+          <attributeName>Type</attributeName>
+          <attributeDefinition>Community type (either remote or road-connected)</attributeDefinition>
+          <measurementScale>
+            
+          <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>remote</code>
+                    <definition>remote community that is not connected to road network</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>road-connected</code>
+                    <definition>community is connected to road network</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal></measurementScale><annotation><propertyURI label="contains measurements of type">http://ecoinformatics.org/oboe/oboe.1.2/oboe-core.owl#containsMeasurementsOfType</propertyURI><valueURI label="categorical data measurement type">http://purl.obolibrary.org/obo/ENVO_04000000</valueURI></annotation>
+          
+        </attribute></attributeList>
+      <geometry>MultiPolygon</geometry>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+    </spatialVector><spatialRaster id="urn-uuid-5c135308-84b2-43fd-84f8-4f693e4c062e">
+      <entityName>probability_subsistence_InteriorAK.tif</entityName>
+      <entityDescription>Probability of subsistence land use for the Interior region of Alaska. Derived from community-level model output and represents maximum probability value per pixel.</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_InteriorAK.tif</objectName>
+        <size unit="bytes">3611775430</size>
+        <authentication method="SHA-256">eabd142c2ca3b1f835e4b87168f5cc12313435340e206259d303cf891f861b1c</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:5c135308-84b2-43fd-84f8-4f693e4c062e</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>35942</rows>
+      <columns>42941</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-26e6c5de-bf61-42a5-8137-41c18e41ae84">
+      <entityName>probability_subsistence_remote_Alatna.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Alatna</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Alatna.tif</objectName>
+        <size unit="bytes">409164254</size>
+        <authentication method="MD5">ed9010901f55fe695297cd8ddaa2640e</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:26e6c5de-bf61-42a5-8137-41c18e41ae84</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-c26291d2-021d-4730-9df7-d90c4135634f">
+      <entityName>probability_subsistence_remote_Allakaket.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Allakaket</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Allakaket.tif</objectName>
+        <size unit="bytes">409164256</size>
+        <authentication method="SHA-256">055493fedcefd69abe73a7e035277e24f498dc59e7b15c83485505b1f269c90c</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:c26291d2-021d-4730-9df7-d90c4135634f</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-18e2d704-34bd-499e-95fd-3afd87f59394">
+      <entityName>probability_subsistence_remote_Aniak.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Aniak</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Aniak.tif</objectName>
+        <size unit="bytes">409112737</size>
+        <authentication method="SHA-256">787c1b344a34c0b6d49feae110da7acfc49a65acfb660d53deb9760bd8bb2d79</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:18e2d704-34bd-499e-95fd-3afd87f59394</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-ce08ddfb-d58b-4f5b-ac29-123b0b8fd80e">
+      <entityName>probability_subsistence_remote_Anvik.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Anvik</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Anvik.tif</objectName>
+        <size unit="bytes">409112737</size>
+        <authentication method="SHA-256">667ab2062e092b514a75a54c3b5bf516a29114f2d68dc866e56ae7ae1e395c9f</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:ce08ddfb-d58b-4f5b-ac29-123b0b8fd80e</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-6f837bb2-6333-41a5-93f3-a544ef5bf3de">
+      <entityName>probability_subsistence_remote_ArcticVillage.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Arctic Village</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_ArcticVillage.tif</objectName>
+        <size unit="bytes">409163932</size>
+        <authentication method="SHA-256">9f016423ec8b15672c0f765c27d36aac80c17a7b3b47c44613a1445815d137f1</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:6f837bb2-6333-41a5-93f3-a544ef5bf3de</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-77103c28-888d-49eb-9f95-4be515aba86e">
+      <entityName>probability_subsistence_remote_Beaver.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Beaver</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Beaver.tif</objectName>
+        <size unit="bytes">409164256</size>
+        <authentication method="SHA-256">ac4d98fba25657635715cec72f7ee041127e5f8cc7ed401290ad92f8dcda7777</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:77103c28-888d-49eb-9f95-4be515aba86e</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-e3a16684-b800-4d64-8bd8-1f107961e5e7">
+      <entityName>probability_subsistence_remote_Bettles.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Bettles</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Bettles.tif</objectName>
+        <size unit="bytes">409163930</size>
+        <authentication method="SHA-256">00272413d595128b50f23b48572e38248e5242465be920779caa26b5599528f8</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:e3a16684-b800-4d64-8bd8-1f107961e5e7</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-aa3f8246-899d-4208-a7f8-84b0aa5eff0b">
+      <entityName>probability_subsistence_remote_BirchCreek.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Birch Creek</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_BirchCreek.tif</objectName>
+        <size unit="bytes">409163930</size>
+        <authentication method="SHA-256">49c7cc63d10ecb2fc84828174c3de8c84aff607757bd5f4a8568e9af216ad6da</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:aa3f8246-899d-4208-a7f8-84b0aa5eff0b</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-afc97d56-bb27-4e09-846c-0d8208141ad3">
+      <entityName>probability_subsistence_remote_Chalkyitsik.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Chalkyitsik</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Chalkyitsik.tif</objectName>
+        <size unit="bytes">409112737</size>
+        <authentication method="SHA-256">1cea3d991e1ecf8ff49f78a0d621ac8b9451b97518ef783b7ceba2a94e626f62</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:afc97d56-bb27-4e09-846c-0d8208141ad3</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-4d787d25-15ae-418d-91b6-9a1db639f7db">
+      <entityName>probability_subsistence_remote_Chuathbaluk.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Chuathbaluk</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Chuathbaluk.tif</objectName>
+        <size unit="bytes">409163930</size>
+        <authentication method="SHA-256">e4efe7c2d83bbb98b4696e18285788594c4a4bf61804af0b732c093b0476e79b</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:4d787d25-15ae-418d-91b6-9a1db639f7db</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-6cec062c-3bc2-4f63-ae45-9bb3599744a0">
+      <entityName>probability_subsistence_remote_CrookedCreek.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Crooked Creek</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_CrookedCreek.tif</objectName>
+        <size unit="bytes">409163930</size>
+        <authentication method="SHA-256">b3237b461b99f6a711218ec7d6c4202edee6b0ad0ccb33f32300e8f8d03e045c</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:6cec062c-3bc2-4f63-ae45-9bb3599744a0</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-3943a52a-bb08-467c-8020-bff37ec9a761">
+      <entityName>probability_subsistence_remote_Evansville.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Evansville</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Evansville.tif</objectName>
+        <size unit="bytes">409163932</size>
+        <authentication method="SHA-256">ae2a798b531867168fbcb751f2f3a3f460f052e659408f05be54a008d89a181f</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:3943a52a-bb08-467c-8020-bff37ec9a761</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-3be2f655-eaf4-4916-a1fb-64d00b0d3e47">
+      <entityName>probability_subsistence_remote_FortYukon.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Fort Yukon</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_FortYukon.tif</objectName>
+        <size unit="bytes">409163930</size>
+        <authentication method="SHA-256">160d03c04086e83f9c86d97ed6140d24b0d90bab70de7e1cae1e463e930a28c1</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:3be2f655-eaf4-4916-a1fb-64d00b0d3e47</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-f73ea7bf-7e3d-43d9-86f9-9e00c59f32e1">
+      <entityName>probability_subsistence_remote_Galena.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Galena</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Galena.tif</objectName>
+        <size unit="bytes">409163930</size>
+        <authentication method="SHA-256">20dfd457df3e2921397a7ab5e7a01a1bdff2a2a8a20b72815a57ee945bf4b560</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:f73ea7bf-7e3d-43d9-86f9-9e00c59f32e1</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-e4ee4f28-a8a2-4cb6-8385-5f9bc094ab6c">
+      <entityName>probability_subsistence_remote_Grayling.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Grayling</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Grayling.tif</objectName>
+        <size unit="bytes">409112736</size>
+        <authentication method="SHA-256">7bbef868534e25b1b89166da7f5ee715df57ef28fb8787e56a296eddb2799a91</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:e4ee4f28-a8a2-4cb6-8385-5f9bc094ab6c</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-55ea0340-a3d6-447c-8845-03858973c293">
+      <entityName>probability_subsistence_remote_HolyCross.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Holy Cross</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_HolyCross.tif</objectName>
+        <size unit="bytes">336612224</size>
+        <authentication method="SHA-256">2b2e05411e1a54cdfe053b460e485ab78a76493902f38652e78b4eca0d944d50</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:55ea0340-a3d6-447c-8845-03858973c293</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>8272</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-b9922ba9-4caf-4d42-9f03-063b296537a0">
+      <entityName>probability_subsistence_remote_Hughes.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Hughes</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Hughes.tif</objectName>
+        <size unit="bytes">409163932</size>
+        <authentication method="SHA-256">8a1ad58a6ce74fd9be760e05e17c41f57a378ed3b15654861e0626fee54a917d</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:b9922ba9-4caf-4d42-9f03-063b296537a0</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-df274cf8-4c5b-489a-b201-57130a91fd56">
+      <entityName>probability_subsistence_remote_Huslia.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Huslia</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Huslia.tif</objectName>
+        <size unit="bytes">409112737</size>
+        <authentication method="SHA-256">5689ae88fa2f50ce1318d15bb2ae3f1611bfc73d96ce276ec0d6ee88e36351e4</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:df274cf8-4c5b-489a-b201-57130a91fd56</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-34889b2d-e443-4170-87fd-882bdeff431d">
+      <entityName>probability_subsistence_remote_Kaltag.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Kaltag</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Kaltag.tif</objectName>
+        <size unit="bytes">409112737</size>
+        <authentication method="SHA-256">ad64273ceb412053907ab1272ec730fa6a7110f1f4a879268e2cb417c2c41525</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:34889b2d-e443-4170-87fd-882bdeff431d</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-e3dacf0a-0d45-416f-b0ad-c0cc329edd83">
+      <entityName>probability_subsistence_remote_Koyukuk.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Koyukuk</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Koyukuk.tif</objectName>
+        <size unit="bytes">409112735</size>
+        <authentication method="SHA-256">b49960d7c89b45c2ee67f993c93de353e62cb490ef0fe09676746ce25c1fc5ad</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:e3dacf0a-0d45-416f-b0ad-c0cc329edd83</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-46da353d-70d8-4acc-b891-3ed70bb1abe2">
+      <entityName>probability_subsistence_remote_LakeMinchumina.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Lake Minchumina</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_LakeMinchumina.tif</objectName>
+        <size unit="bytes">409163932</size>
+        <authentication method="SHA-256">8a3fd340c717ff8caeb75d49c0d19a7d2387393da0dd07f0eaf9b5f271436333</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:46da353d-70d8-4acc-b891-3ed70bb1abe2</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-5f1520a4-e562-42ac-96f5-59edd00f139c">
+      <entityName>probability_subsistence_remote_LimeVillage.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Lime Village</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_LimeVillage.tif</objectName>
+        <size unit="bytes">409112736</size>
+        <authentication method="SHA-256">26eabbc03f45e8da6506c3009058801097e432892f45daa672376610ea0c732f</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:5f1520a4-e562-42ac-96f5-59edd00f139c</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-0782e0aa-d846-4f0d-9bb8-e1dd945f56d3">
+      <entityName>probability_subsistence_remote_LowerKalskag.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Lower Kalskag</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_LowerKalskag.tif</objectName>
+        <size unit="bytes">409112736</size>
+        <authentication method="SHA-256">2c60b1fdd1001f5b6159f9970ce6de548cf9721eeb8737d7cac8d30b7ba60b22</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:0782e0aa-d846-4f0d-9bb8-e1dd945f56d3</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-c76a1606-840f-4f64-b716-affdbdc8d8a1">
+      <entityName>probability_subsistence_remote_McGrath.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of McGrath</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_McGrath.tif</objectName>
+        <size unit="bytes">409163930</size>
+        <authentication method="SHA-256">b86494b3a392ecc25fa37f3e1dab1d614bdb0c8901070316c80bcf46ec363f7d</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:c76a1606-840f-4f64-b716-affdbdc8d8a1</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-322a609e-e040-4046-ae63-5d452089c89d">
+      <entityName>probability_subsistence_remote_Nikolai.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Nikolai</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Nikolai.tif</objectName>
+        <size unit="bytes">409163932</size>
+        <authentication method="SHA-256">ab3394ee569e68201372606bb85184a4fa46f12cd8ea4754c2ad519995146bfa</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:322a609e-e040-4046-ae63-5d452089c89d</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-94e12f5f-e403-4f94-ae4a-8aca3059d721">
+      <entityName>probability_subsistence_remote_Nulato.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Nulato</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Nulato.tif</objectName>
+        <size unit="bytes">403934128</size>
+        <authentication method="SHA-256">4d782b9147ce355682bbc9f0c980f066b65488520d717f3a37de282fccf0545c</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:94e12f5f-e403-4f94-ae4a-8aca3059d721</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>9984</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-c4b9965d-9d51-4b32-b231-6d437e3d6728">
+      <entityName>probability_subsistence_remote_Rampart.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Rampart</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Rampart.tif</objectName>
+        <size unit="bytes">409163932</size>
+        <authentication method="SHA-256">133046035fd37e84eb513d2543269431799b30634d89d52d77cb8563f7078cfa</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:c4b9965d-9d51-4b32-b231-6d437e3d6728</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-53f86ea4-0fab-4922-964d-a5485ad96cb6">
+      <entityName>probability_subsistence_remote_RedDevil.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Red Devil</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_RedDevil.tif</objectName>
+        <size unit="bytes">409163932</size>
+        <authentication method="SHA-256">a1a2df2268e0d38a0ae18aa9b11c18e1b7e2c3112c0d31ed2a258f2624576e28</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:53f86ea4-0fab-4922-964d-a5485ad96cb6</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-90cab031-c183-4745-b95e-7c8ae9d309ba">
+      <entityName>probability_subsistence_remote_Ruby.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Ruby</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Ruby.tif</objectName>
+        <size unit="bytes">409163930</size>
+        <authentication method="SHA-256">d061e9aa97d8abc317b80814983c22192ce71bb0478c1e80947c1dfb54d07823</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:90cab031-c183-4745-b95e-7c8ae9d309ba</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-da3dbf09-8346-4a88-a49a-2bdfa0393392">
+      <entityName>probability_subsistence_remote_Shageluk.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Shageluk</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Shageluk.tif</objectName>
+        <size unit="bytes">409112736</size>
+        <authentication method="SHA-256">61fa409f5fcee07156b4ae9a9c7d7033b3e4367cd1b4507e747c6ba8d87da2a9</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:da3dbf09-8346-4a88-a49a-2bdfa0393392</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-2c7ea39f-3f5a-4667-8d10-a784cdf72568">
+      <entityName>probability_subsistence_remote_Sleetmute.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Sleetmute</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Sleetmute.tif</objectName>
+        <size unit="bytes">409163930</size>
+        <authentication method="SHA-256">e0f5b44a50a1bd7f5d7d811b3a2d0c02cc3495bc00cf0975794928a4ac35db0b</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:2c7ea39f-3f5a-4667-8d10-a784cdf72568</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-4b2a8dd9-4134-41d3-921c-607d08a62e45">
+      <entityName>probability_subsistence_remote_StevensVillage.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Stevens Village</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_StevensVillage.tif</objectName>
+        <size unit="bytes">409163930</size>
+        <authentication method="SHA-256">7a44e3c6cb5acd8fa541fbac1765f29cf05ac063dcb3cd030532e91968518fe8</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:4b2a8dd9-4134-41d3-921c-607d08a62e45</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-1f989050-9b3e-4793-b7fa-4953c6491d2d">
+      <entityName>probability_subsistence_remote_StonyRiver.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Stony River</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_StonyRiver.tif</objectName>
+        <size unit="bytes">409163932</size>
+        <authentication method="SHA-256">8e28ec452267add974e0982d7668a4041f03a079cced8d9fc63671b1bc5ac2a9</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:1f989050-9b3e-4793-b7fa-4953c6491d2d</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-a3b54b35-6c4a-4c3b-93fc-d25a01bc279f">
+      <entityName>probability_subsistence_remote_Takotna.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Takotna</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Takotna.tif</objectName>
+        <size unit="bytes">409163932</size>
+        <authentication method="SHA-256">111b33f584abb4745e1c4e01cf8db52dce048152879e2967161691de9d958a0f</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:a3b54b35-6c4a-4c3b-93fc-d25a01bc279f</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-3d222489-58b7-4223-a28b-395e0cc71709">
+      <entityName>probability_subsistence_remote_Tanana.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Tanana</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Tanana.tif</objectName>
+        <size unit="bytes">409163930</size>
+        <authentication method="SHA-256">1e928dda8d7bca9e5206903415f97cd98fafb953bbbbb98bd60f7b9f89e516dc</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:3d222489-58b7-4223-a28b-395e0cc71709</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-68f75ce8-919a-49a9-a0e7-2dab01a0aa63">
+      <entityName>probability_subsistence_remote_UpperKalskag.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Upper Kalskag</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_UpperKalskag.tif</objectName>
+        <size unit="bytes">409112737</size>
+        <authentication method="SHA-256">0fee4e0dc10aa8e47cee1c1ae3fc45c6478f53eb6b4e41522352a6926450697c</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:68f75ce8-919a-49a9-a0e7-2dab01a0aa63</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-3808d390-5d36-425c-bfd5-1852adf34b7a">
+      <entityName>probability_subsistence_remote_Venetie.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Venetie</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_remote_Venetie.tif</objectName>
+        <size unit="bytes">372909248</size>
+        <authentication method="SHA-256">59dc435918887fa9186f23a77a305fb96655eb3fe3cbf26490c1f93db3561e3c</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:3808d390-5d36-425c-bfd5-1852adf34b7a</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>9101</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-c8b7ae79-7682-4d52-ba64-e4bfa418a604">
+      <entityName>probability_subsistence_road_AlcanBorder.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Alcan Border</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_AlcanBorder.tif</objectName>
+        <size unit="bytes">409061210</size>
+        <authentication method="SHA-256">b796fe66f420a8ccea8ecac502de6ccf6e29c18d655d615d661780623ccda63e</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:c8b7ae79-7682-4d52-ba64-e4bfa418a604</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10068</rows>
+      <columns>10068</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-9f3ceb0d-1a13-47b9-a376-6327613e2649">
+      <entityName>probability_subsistence_road_Anderson.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Anderson</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_Anderson.tif</objectName>
+        <size unit="bytes">409163930</size>
+        <authentication method="SHA-256">3c979dda5da159dcce7a91fa41b2e60aa834fece859002d842203a99c6c89fe3</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:9f3ceb0d-1a13-47b9-a376-6327613e2649</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-fdc14b86-586c-4001-8f67-50bc341adbe2">
+      <entityName>probability_subsistence_road_BigDelta.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Big Delta</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_BigDelta.tif</objectName>
+        <size unit="bytes">409164256</size>
+        <authentication method="SHA-256">0a353116026e198d6be680db6a021d97ca01bdd9ffd9095811cc2b2735eadf0a</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:fdc14b86-586c-4001-8f67-50bc341adbe2</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-432ac59c-5d2d-476e-927f-09ae7db081f9">
+      <entityName>probability_subsistence_road_Central.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Central</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_Central.tif</objectName>
+        <size unit="bytes">409164586</size>
+        <authentication method="SHA-256">cf70b956280d0b299111d599ad29cbfddf5cfc2f0ca6c6ed328d476d287024ee</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:432ac59c-5d2d-476e-927f-09ae7db081f9</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-8dacd444-e84e-4c15-b997-bb7544346b84">
+      <entityName>probability_subsistence_road_Chicken.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Chicken</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_Chicken.tif</objectName>
+        <size unit="bytes">336612440</size>
+        <authentication method="SHA-256">e72073a1382fb962ccd7be6fa31c9a2c46a95a2c5b4395d3820cb2f031abd6c0</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:8dacd444-e84e-4c15-b997-bb7544346b84</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>8254</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-06259c05-c3bc-4fda-bef3-d37e358842f3">
+      <entityName>probability_subsistence_road_Circle.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Circle</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_Circle.tif</objectName>
+        <size unit="bytes">409164590</size>
+        <authentication method="SHA-256">e45bdfe183979ed11a8135e834c12132691c72950ea377ad95145e0ed85f0aeb</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:06259c05-c3bc-4fda-bef3-d37e358842f3</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-f54e3b92-0deb-4b75-879b-65342c1a0015">
+      <entityName>probability_subsistence_road_Coldfoot.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Coldfoot</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_Coldfoot.tif</objectName>
+        <size unit="bytes">405813478</size>
+        <authentication method="SHA-256">0db9ae3ba5494c218c597b7a57594350443c7770601eaa7172ca85d0b7862aa2</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:f54e3b92-0deb-4b75-879b-65342c1a0015</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10068</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-4d9dfc4c-df68-4a34-8874-3aea9a934924">
+      <entityName>probability_subsistence_road_DeltaJunction.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Delta Junction</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_DeltaJunction.tif</objectName>
+        <size unit="bytes">409163930</size>
+        <authentication method="SHA-256">2bda056ad4a89551d4e7306dd03fcd65286fb5587e1dde11695bdda9106e9866</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:4d9dfc4c-df68-4a34-8874-3aea9a934924</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-a526e03a-897b-41a1-87b9-44c5160f89be">
+      <entityName>probability_subsistence_road_Deltana.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Deltana</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_Deltana.tif</objectName>
+        <size unit="bytes">480546014</size>
+        <authentication method="SHA-256">eaee1d0bc4bf556c2a990c84cdd00a64ff16aa4509fe8714df811a7b8c20072d</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:a526e03a-897b-41a1-87b9-44c5160f89be</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>11281</rows>
+      <columns>11266</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-26403e34-2838-4569-94bb-24e2a699ee62">
+      <entityName>probability_subsistence_road_DenaliPark.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Denali Park</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_DenaliPark.tif</objectName>
+        <size unit="bytes">409163932</size>
+        <authentication method="SHA-256">8a5351e5df9ba4da273e56596caf18ddac05bf7e9ec56a459a096ab6b2e362c8</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:26403e34-2838-4569-94bb-24e2a699ee62</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-a8c798c5-209f-4b92-af36-2a47855799f0">
+      <entityName>probability_subsistence_road_DotLake.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Dot Lake</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_DotLake.tif</objectName>
+        <size unit="bytes">409112737</size>
+        <authentication method="SHA-256">343fa1b2600b9271d2f2e8009454b9bfd8ce798c3ecfc537946683e599569c70</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:a8c798c5-209f-4b92-af36-2a47855799f0</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-d1327961-6206-4c77-baff-229bb4b34688">
+      <entityName>probability_subsistence_road_DryCreek.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Dry Creek</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_DryCreek.tif</objectName>
+        <size unit="bytes">409164254</size>
+        <authentication method="SHA-256">b9766a58909ad99715289b67e6f1099b7469e4126f5ee5fb64c838fcfc234dec</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:d1327961-6206-4c77-baff-229bb4b34688</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-bd5dc9d3-ade3-428a-9b15-74806da6fcda">
+      <entityName>probability_subsistence_road_Eagle.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Eagle</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_Eagle.tif</objectName>
+        <size unit="bytes">255655505</size>
+        <authentication method="SHA-256">0d7b3348d3c3a5535ea0bffbf0623cf181eae76647a6edfcb8f7d2c6b13a9b10</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:bd5dc9d3-ade3-428a-9b15-74806da6fcda</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>9957</rows>
+      <columns>6283</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-b9e57ca0-a9c3-4ece-b9a0-70c9e7688e76">
+      <entityName>probability_subsistence_road_EagleVillage.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Eagle Village</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_EagleVillage.tif</objectName>
+        <size unit="bytes">250542665</size>
+        <authentication method="SHA-256">b99d8b09fabe09c339191604a026bf3560159cbbe0abc598a3d3e67c68b9b261</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:b9e57ca0-a9c3-4ece-b9a0-70c9e7688e76</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>9937</rows>
+      <columns>6150</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-b355ef97-be9a-4650-ad0b-e9c10fff21b3">
+      <entityName>probability_subsistence_road_Ferry.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Ferry</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_Ferry.tif</objectName>
+        <size unit="bytes">399531564</size>
+        <authentication method="SHA-256">e0cb6510eb73bd467a4ab8c6366178fe805c86b1af5fcef212c3de214cb29afe</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:b355ef97-be9a-4650-ad0b-e9c10fff21b3</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-b82a03c5-d74d-453a-a209-fa9a7c35906c">
+      <entityName>probability_subsistence_road_Healy.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Healy</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_Healy.tif</objectName>
+        <size unit="bytes">409163932</size>
+        <authentication method="SHA-256">49c49e815002cca455b640418ea512b06501acd2af85370c6575ef4428f3acf4</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:b82a03c5-d74d-453a-a209-fa9a7c35906c</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-32f66d5e-8e1c-45ef-bd74-5ab86f52664f">
+      <entityName>probability_subsistence_road_HealyLake.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Healy Lake</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_HealyLake.tif</objectName>
+        <size unit="bytes">409163932</size>
+        <authentication method="SHA-256">28311220350b5bcdf36a700cae64bf01211a3554d9407078324ecaa5efd798c3</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:32f66d5e-8e1c-45ef-bd74-5ab86f52664f</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-35147746-ab4e-474b-8bb4-4a318e3405bf">
+      <entityName>probability_subsistence_road_Livengood.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Livengood</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_Livengood.tif</objectName>
+        <size unit="bytes">409164254</size>
+        <authentication method="SHA-256">1014a9cb11ef624731bdd7d07f120c5cb7892c7bb69d19147182fcd671df3502</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:35147746-ab4e-474b-8bb4-4a318e3405bf</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-5a82057f-6201-444d-9ee1-d7fc9627d494">
+      <entityName>probability_subsistence_road_ManleyHotSprings.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Manley Hot Springs</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_ManleyHotSprings.tif</objectName>
+        <size unit="bytes">409163932</size>
+        <authentication method="SHA-256">464b4f9b8151150158b9063f719b878c3215f3597cee528fcc63a5db2fece116</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:5a82057f-6201-444d-9ee1-d7fc9627d494</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-6272097c-4afa-46c5-a666-fe6b1fc6deb8">
+      <entityName>probability_subsistence_road_Minto.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Minto</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_Minto.tif</objectName>
+        <size unit="bytes">409164254</size>
+        <authentication method="SHA-256">122b52a73930c93c59e031df1a631a6da0c84f95ec8b0071f5b322673603c27d</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:6272097c-4afa-46c5-a666-fe6b1fc6deb8</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-fe227068-3451-47fd-9e76-2c3851641abf">
+      <entityName>probability_subsistence_road_Nenana.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Nenana</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_Nenana.tif</objectName>
+        <size unit="bytes">409163930</size>
+        <authentication method="SHA-256">80a9a1dddffd49e1f66262186f74b467347a0dc46773b262a24bb5bba20d4dac</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:fe227068-3451-47fd-9e76-2c3851641abf</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>10000</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-808c5c5f-a00f-40d5-bed3-80b665ab1736">
+      <entityName>probability_subsistence_road_Northway.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Northway</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_Northway.tif</objectName>
+        <size unit="bytes">305540577</size>
+        <authentication method="SHA-256">1c6823051250e4ef433a970106cf098d7a654b01eb56706973900a89fd78fe94</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:808c5c5f-a00f-40d5-bed3-80b665ab1736</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>7474</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-ee26ad6c-4fbf-4001-8f47-b3a96345620e">
+      <entityName>probability_subsistence_road_Salcha.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Salcha</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_Salcha.tif</objectName>
+        <size unit="bytes">392989360</size>
+        <authentication method="SHA-256">3b72f9d11cb7b787ae7767c807e03e96b5888c7a14124022bc8cf2a29b474c5c</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:ee26ad6c-4fbf-4001-8f47-b3a96345620e</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-97157f98-19e8-4143-871c-144d53acda6a">
+      <entityName>probability_subsistence_road_Tanacross.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Tanacross</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_Tanacross.tif</objectName>
+        <size unit="bytes">409112951</size>
+        <authentication method="SHA-256">9e04f605a06e45425f1c7e8c14f92e40836db26c432205948c4ebc84ed1311f6</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:97157f98-19e8-4143-871c-144d53acda6a</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-3019544c-5d7d-4d89-8f8e-1f1b88272939">
+      <entityName>probability_subsistence_road_Tetlin.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Tetlin</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_Tetlin.tif</objectName>
+        <size unit="bytes">352148265</size>
+        <authentication method="SHA-256">d1208aac811fefa946e8590b2e4d2fbfb97ad748e59af5c352f53c26b597f874</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:3019544c-5d7d-4d89-8f8e-1f1b88272939</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>8582</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-5e4c1941-5b73-4164-9461-f69f4125f4f5">
+      <entityName>probability_subsistence_road_Tok.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Tok</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_Tok.tif</objectName>
+        <size unit="bytes">367683872</size>
+        <authentication method="SHA-256">2c7f693d74f0822faa4f90ad785053a35c2f04fb939ef09a68dac3fd0e21591b</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:5e4c1941-5b73-4164-9461-f69f4125f4f5</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10000</rows>
+      <columns>8974</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster><spatialRaster id="urn-uuid-cb846508-3843-48e3-8e5f-f1c4a5006042">
+      <entityName>probability_subsistence_road_Wiseman.tif</entityName>
+      <entityDescription>Probability of subsistence land use by the community of Wiseman</entityDescription>
+      <physical>
+        <objectName>probability_subsistence_road_Wiseman.tif</objectName>
+        <size unit="bytes">409164256</size>
+        <authentication method="SHA-256">2afc7f7b5cbe8ec4237f6a4d7223d467f2dc08a782c1ea579a65528987f249ea</authentication>
+        <dataFormat>
+          <externallyDefinedFormat>
+            <formatName>image/geotiff</formatName>
+          </externallyDefinedFormat>
+        </dataFormat>
+        <distribution>
+          <online>
+            <url function="download">https://cn.dataone.org/cn/v2/resolve/urn:uuid:cb846508-3843-48e3-8e5f-f1c4a5006042</url>
+          </online>
+        </distribution>
+      </physical>
+      <attributeList>
+        
+      <attribute>
+          <attributeName>Value</attributeName>
+          <attributeDefinition>Probability of subsistence land use</attributeDefinition>
+          <measurementScale>
+            
+          <ratio><unit><standardUnit>dimensionless</standardUnit></unit><numericDomain><numberType>real</numberType></numericDomain>
+              
+              
+            </ratio></measurementScale>
+        </attribute></attributeList>
+      <spatialReference>
+        <horizCoordSysName>GCS_North_American_1983</horizCoordSysName>
+      </spatialReference>
+      <horizontalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </horizontalAccuracy>
+      <verticalAccuracy>
+        <accuracyReport>unknown</accuracyReport>
+      </verticalAccuracy>
+      <cellSizeXDirection>30</cellSizeXDirection>
+      <cellSizeYDirection>30</cellSizeYDirection>
+      <numberOfBands>1</numberOfBands>
+      <rasterOrigin>Upper Left</rasterOrigin>
+      <rows>10067</rows>
+      <columns>10067</columns>
+      <verticals>1</verticals>
+      <cellGeometry>pixel</cellGeometry>
+    </spatialRaster>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </dataset>
+</eml:eml>
