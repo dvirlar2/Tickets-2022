@@ -1,0 +1,6 @@
+id,name,unitType,udunitsSynonym,description,abbreviation,multiplierToSI,deprecatedInFavorOf,parentSI,constantToSI
+microatmosphere,microatmosphere,pressure,NA,microatmosphere,uatm,NA,NA,atmosphere,NA
+partsPerThousand,partsPerThousand,dimensionless,parts per thousand,parts per thousand,ppm,NA,NA,percent,NA
+microsiemensPerCentimeter,microsiemensPerCentimeter,conductivity,NA,"a unit for conductivity, measure of a material's ability to conduct an electric current",umS/cm,NA,NA,siemensPerCentimeter,NA
+literPerMilligramPerMeter,literPerMilligramPerMeter,NA,NA,liter per milligram per meter,L/mg/m,NA,NA,NA,NA
+nanomolePerMeterSquaredPerSecond,nanomolePerMeterSquaredPerSecond,NA,NA,nanomole per meter squared per second,nmol/m^2/sec,NA,NA,NA,NA
