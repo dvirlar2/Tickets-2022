@@ -1,5 +1,3 @@
-# making an edit to commit
-
 ## -- load libraries -- ##
 library(dataone)
 library(datapack)
@@ -13,7 +11,7 @@ library(EML)
 d1c <- dataone::D1Client("PROD", "urn:node:ARCTIC")
 
 # Get the package
-packageId <- "resource_map_urn:uuid:7af76384-7ad8-4969-9712-d890f604a07f"
+packageId <- "resource_map_urn:uuid:e5a3641c-04b9-4fc3-9fb5-1a57c00f7a12"
 dp <- getDataPackage(d1c, identifier = packageId, lazyLoad=TRUE, quiet=FALSE)
 
 # Get the metadata id
@@ -65,8 +63,26 @@ doc$dataset$dataTable[[4]]$attributeList <- set_attributes(atts_edited$attribute
 
 
 ## -- convert other entities to spatial raster  -- ##
+# set path
+tiff <- "~/Tickets-2022/Polashenski/polashenski.tif"
+
+# find coordinate system
+rgdal::GDALinfo(tiff)
+  # projection  +proj=utm +zone=11 +datum=WGS84 +units=m +no_defs 
+
+raster::raster(tiff)
+  # crs: +proj=utm +zone=11 +datum=WGS84 +units=m +no_defs 
 
 
+spatialRaster <- dvk_get_raster_metadata(tiff, "GCS_WGS_1984", doc$dataset$otherEntity$attributeList)
+
+doc$dataset$spatialRaster <- spatialRaster
+doc$dataset$otherEntity <- NULL
+
+eml_validate(doc)
+
+
+## -- update package -- ##
 eml_path <- "~/Scratch/Declining_basal_motion_drives_the_long_term.xml"
 write_eml(doc, eml_path)
 
