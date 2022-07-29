@@ -11,7 +11,7 @@ library(EML)
 d1c <- dataone::D1Client("PROD", "urn:node:ARCTIC")
 
 # Get the package
-packageId <- "resource_map_urn:uuid:e5a3641c-04b9-4fc3-9fb5-1a57c00f7a12"
+packageId <- "resource_map_urn:uuid:129c9d95-87df-4443-9710-79b524079f80"
 dp <- getDataPackage(d1c, identifier = packageId, lazyLoad=TRUE, quiet=FALSE)
 
 # Get the metadata id
@@ -80,6 +80,36 @@ doc$dataset$spatialRaster <- spatialRaster
 doc$dataset$otherEntity <- NULL
 
 eml_validate(doc)
+
+
+## -- change raster format ID -- ##
+tiff_pid <- selectMember(dp, "sysmeta@fileName", ".tif")
+
+sysmeta <- getSystemMetadata(d1c@mn, tiff_pid)
+sysmeta@formatId <- "	image/geotiff"
+updateSystemMetadata(d1c@mn, tiff_pid, sysmeta)
+
+
+## -- add physical to raster -- ##
+physical <- arcticdatautils::pid_to_eml_physical(d1c@mn, tiff_pid)
+
+doc$dataset$spatialRaster$physical <- physical
+
+
+## -- update csv physicals -- ##
+all_pids <- get_package(d1c@mn, packageId, file_names = TRUE)
+all_pids <- reorder_pids(all_pids$data, doc)
+
+
+# remove tif pid
+all_pids <- all_pids[c(2:5)]
+
+
+
+# for loop to assign physicals for each file 
+for (i in 1:length(all_pids)){
+  doc$dataset$dataTable[[i]]$physical <- pid_to_eml_physical(d1c@mn, all_pids[[i]])
+}
 
 
 ## -- update package -- ##
