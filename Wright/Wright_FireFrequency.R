@@ -296,7 +296,7 @@ library(EML)
 d1c <- dataone::D1Client("PROD", "urn:node:ARCTIC")
 
 # Get the package
-packageId <- "resource_map_urn:uuid:08921ac8-bab2-4e72-8ed2-fb5b45346042"
+packageId <- "resource_map_urn:uuid:3c5ae79a-6063-43f5-ba9d-a633fcbda62c"
 
 dp <- getDataPackage(d1c, identifier = packageId, lazyLoad=TRUE, quiet=FALSE)
 
@@ -305,6 +305,11 @@ xml <- selectMember(dp, "sysmeta@fileName", ".xml")
 
 # Read in the metadata
 doc <- read_eml(getObject(d1c@mn, xml))
+
+
+## -- FAIR Principles -- ##
+doc <- eml_add_publisher(doc)
+doc <- eml_add_entity_system(doc)
 
 
 ## -- fix/add awards -- ##
