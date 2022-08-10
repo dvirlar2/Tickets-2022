@@ -10,7 +10,7 @@ library(EML)
 # get nodes
 d1c <- dataone::D1Client("PROD", "urn:node:ARCTIC")
 
-packageId <- "resource_map_urn:uuid:f13e4c8f-a711-4227-8602-33f1eb619d50"
+packageId <- "resource_map_urn:uuid:340df867-58c2-4c00-880a-3eee4c66b3cf"
 dp <- getDataPackage(d1c, identifier = packageId, lazyLoad=TRUE, quiet=FALSE)
 
 
@@ -87,4 +87,28 @@ myAccessRules <- data.frame(subject="CN=arctic-data-admins,DC=dataone,DC=org",
 
 # Publish package with DOI
 newPackageId <- uploadDataPackage(d1c, dp, public=FALSE,
+                                  accessRules = myAccessRules, quiet=FALSE)
+
+
+## ------------------------------------------
+# -- add distribution -- #
+doi <- generateIdentifier(d1c@mn, "doi")
+doc <- eml_add_distribution(doc, doi)
+
+
+# -- publish the package -- ##
+# write EML
+eml_path <- "~/Scratch/Bioeconomic_Analysis_for_Arctic_Marine_Resource.xml"
+write_eml(doc, eml_path)
+
+
+# replace eml and add doi
+dp <- replaceMember(dp, xml, replacement = eml_path, newId = doi)
+
+# Set access rules
+myAccessRules <- data.frame(subject="CN=arctic-data-admins,DC=dataone,DC=org",
+                            permission="changePermission")
+
+# Publish package with DOI
+newPackageId <- uploadDataPackage(d1c, dp, public=TRUE,
                                   accessRules = myAccessRules, quiet=FALSE)
