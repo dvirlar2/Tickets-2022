@@ -29,8 +29,20 @@ doc$dataset$project$funding <- NULL
 doc <- eml_categorize_dataset(doc, "Cryology")
 
 
+## -- add physicals -- ##
+all_pids <- get_package(d1c@mn, packageId, file_names = TRUE)
+data_pids <- reorder_pids(all_pids$data, doc) # lines up pids w/correct file
+
+# for loop to assign physicals for each file 
+for (i in 1:length(data_pids)){
+  doc$dataset$dataTable[[i]]$physical <- pid_to_eml_physical(d1c@mn, data_pids[[i]])
+}
+
+eml_validate(doc)
+
+
 ## -- update package -- ##
-eml_path <- "~/Scratch/Alaska_Community_Ice_Observations_2019_2022.xml"
+eml_path <- "~/Scratch/Alaska_Community_Ice_Observations_.xml"
 write_eml(doc, eml_path)
 
 dp <- replaceMember(dp, xml, replacement = eml_path)
@@ -38,5 +50,5 @@ dp <- replaceMember(dp, xml, replacement = eml_path)
 myAccessRules <- data.frame(subject="CN=arctic-data-admins,DC=dataone,DC=org", 
                             permission="changePermission")
 
-newPackageId <- uploadDataPackage(d1c, dp, public = FALSE,
+newPackageId <- uploadDataPackage(d1c, dp, public = FALSE, 
                                   accessRules = myAccessRules, quiet = FALSE)
