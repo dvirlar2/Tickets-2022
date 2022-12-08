@@ -55,6 +55,8 @@ spatialVector <- pid_to_eml_entity(d1c@mn,
 
 # step 5: add spatial vector to doc
 doc$dataset$spatialVector[[1]] <- spatialVector
+
+# Step 6: NULL the corresponding otherEntity
 doc$dataset$otherEntity[[2]] <- NULL
 eml_validate(doc)
 
